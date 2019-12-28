@@ -1,3 +1,5 @@
+## Rasberry Pi でデバイスドライバを使用したGPIO操作によるLEDの点滅
+
 ### LED点滅
 ##### echo 0 > /dev/myled0  → LEDを消灯
 ##### echo 1 > /dev/myled0  → LEDを点灯
@@ -12,6 +14,7 @@
 ##### ソフトウェア：Raspbian　3.2.1
 
 ### Usage
+##### Rasberry Piの2２番ピンと３９番ピンにLEDを接続
 ##### myled.c を　makefile でコンパイルする
 ##### sudo insmod myled.ko
 ##### sudo chmod 666 /dev/myled0
