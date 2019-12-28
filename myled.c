@@ -4,6 +4,7 @@
 #include <linux/device.h>
 #include <linux/uaccess.h>
 #include <linux/io.h>
+#include<linux/delay.h>
 
 MODULE_AUTHOR("Ayana Enosawa");
 MODULE_DESCRIPTION("driver for LED contorol");
@@ -25,8 +26,16 @@ static ssize_t led_write(struct file* filp, const char* buf, size_t conut, loff_
 		gpio_base[10] = 1 << 25;
 	else if (c == '1')
 		gpio_base[7] = 1 << 25;
+	else if (c == '2'){
+                gpio_base[10] = 1 << 25;
+                ssleep(1);
+                for (i=0;i <=2; i++){
+                        gpio_base[7] = 1 << 25;
+                        ssleep(5);
+                        gpio_base[10] = 1 << 25;
+                        ssleep(1);}
 
-
+	}
 	return 1;
 }
 
