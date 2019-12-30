@@ -26,7 +26,7 @@
 #### sudo rmmod myled
 
 ## License
-#### This software is released under the MIT License, see LICENSE.
+#### This software is released under the GENERAL PUBLIC LICENSE , see LICENSE.
 
 ## References
 #### https://github.com/ryuichiueda/robosys2019.git
